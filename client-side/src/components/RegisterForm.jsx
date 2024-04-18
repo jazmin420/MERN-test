@@ -39,7 +39,7 @@ function RegisterForm() {
       console.log("Form submitted successfully with data:", formData);
       try {
         const response = await axios.post(
-          "http://localhost:3000/register",
+          "https://mern-test-oz1z.onrender.com/register",
           formData
         );
         console.log(response.data);

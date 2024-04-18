@@ -10,7 +10,7 @@ const StudentsTable = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/students');
+        const response = await axios.get('https://mern-test-oz1z.onrender.com/students');
         console.log(response.data)
         setStudents(response.data);
       } catch (error) {
@@ -22,7 +22,7 @@ const StudentsTable = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/students/${id}`);
+      const response = await axios.delete(`https://mern-test-oz1z.onrender.com/students/${id}`);
       console.log(response.data);
       // Remove the deleted student from the state
       setStudents(students.filter((student) => student._id !== id));
